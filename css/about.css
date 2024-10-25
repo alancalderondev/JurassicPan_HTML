@@ -1,0 +1,149 @@
+.about-section {
+    padding-top: 5rem;
+    background-color: #f9fafb;
+    min-height: calc(100vh - 4rem);
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .about-header p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  .team-carousel {
+    overflow: hidden;
+    margin-bottom: 8rem;
+  }
+  
+  .team-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 25s linear infinite;
+  }
+  
+  .team-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  .team-card {
+    flex: none;
+    width: 20rem;
+    text-align: center;
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+  
+  .team-card h3 {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .member-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (min-width: 768px) {
+    .member-card {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .member-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .member-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .member-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .member-header h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .member-header img {
+    width: 3rem;
+  }
+  
+  .member-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 2));
+    }
+  }

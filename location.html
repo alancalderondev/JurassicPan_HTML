@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location - Jurassic Pan</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/location.css">
+</head>
+<body>
+  <!-- Header -->
+  <header-content></header-content>
+
+  <!-- Location Content -->
+  <main class="location-section">
+    <div class="location-container">
+      <h1 style="color: black;">🐱 Ven a visitarnos 🐱</h1>
+      
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15085.68850284064!2d-99.058655!3d19.314193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fdfedbb27a01%3A0x0!2zMTnCsDE4JzUxLjEiTiA5OcKwMDMnMzEuMiJX!5e0!3m2!1sen!2smx!4v1632521234567!5m2!1sen!2smx"
+          loading="lazy">
+        </iframe>
+        <p>Estamos ubicados en .......... y podras encontrarnos pasando la ....... en una carpa ....</p>
+      </div>
+
+      <div class="reviews-section">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="reviews-container">
+          <button class="review-btn prev" id="prevReview">←</button>
+          <div class="reviews-scroll" id="reviewsScroll"></div>
+          <button class="review-btn next" id="nextReview">→</button>
+        </div>
+      </div>
+      
+      <div id="features-container"></div> <!-- Contenedor para la sección de características -->
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer-content></footer-content>
+
+  <script src="./js/location.js" type="module"></script>
+  <script src="./js/Footer.js" defer></script>
+  <script src="./js/Header.js" defer></script>
+</body>
+</html>

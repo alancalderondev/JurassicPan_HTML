@@ -1,0 +1,315 @@
+.location-section {
+    padding-top: 5rem;
+    background-color: #f9fafb;
+    min-height: calc(100vh - 4rem);
+  }
+  
+  .location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+  
+  .location-container h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #16a34a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .map-container p {
+    text-align: center;
+    color: #4b5563;
+    max-width: 600px;
+  }
+  
+  .reviews-section {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .reviews-section h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 2rem;
+  }
+  
+  .reviews-container {
+    position: relative;
+    padding: 0 2rem;
+  }
+  
+  .reviews-scroll {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  
+  .reviews-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .review-card {
+    flex: none;
+    width: 18rem;
+    scroll-snap-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+  
+  .review-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .review-header img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    margin-right: 0.75rem;
+  }
+  
+  .review-info h3 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #1f2937;
+  }
+  
+  .review-content {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-top: 0.25rem;
+  }
+  
+  .review-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #16a34a;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .review-btn:hover {
+    background-color: #15803d;
+  }
+  
+  .review-btn.prev {
+    left: 0;
+  }
+  
+  .review-btn.next {
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .location-container h1 {
+      font-size: 1.875rem;
+    }
+  
+    .map-container iframe {
+      height: 300px;
+    }
+  
+    .reviews-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .review-card {
+      width: calc(100vw - 4rem);
+    }
+  }
+
+  /* Features Section */
+.features-section {
+  
+  background-color: rgba(243, 244, 246, 0.8);
+  padding: 5rem 1rem;
+  margin: 2rem -2rem;
+}
+
+.features-container {
+  margin-top: -800px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-header h2 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #6b7280;
+}
+
+/* Specialties Section 
+.specialties-section {
+  padding: 5rem 1rem;
+}
+
+.specialties-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.specialties-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.specialties-header h2 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.specialties-header p {
+  color: #6b7280;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.specialty-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.specialty-card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.specialty-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.specialty-card:hover .specialty-overlay {
+  opacity: 1;
+}
+
+.specialty-content {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.specialty-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    height: 350px;
+  }
+  
+  .features-grid,
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+}

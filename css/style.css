@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-text {
+  font-size: 1.875rem;
+  color: #16a34a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 3rem;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6b7280;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #4b5563;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.mobile-menu {
+  display: none;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  height: calc(100vh - 4rem); /* Ajusta la altura */
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  width: 80%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.carousel-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+
+.carousel-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #646cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s 0.4s forwards;
+}
+
+.btn:hover {
+  background: #535bf2;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background: #fff3e0;
+  padding: 3rem 0;
+  border-top: 1px solid #f97316;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-image {
+  width: 4rem;
+  height: auto;
+}
+
+.footer-section h3 {
+  color: #f97316;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-section a {
+  color: #f43f5e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #f97316;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 2rem 1rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+
+  .mobile-menu-button {
+      display: block;
+  }
+
+  .mobile-menu.show {
+      display: block;
+  }
+
+  .carousel-content h2 {
+      font-size: 2rem;
+  }
+
+  .carousel-content p {
+      font-size: 1rem;
+  }
+
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Specialties Section */
+.specialties-section {
+  padding: 5rem 1rem;
+}
+
+.specialties-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.specialties-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.specialties-header h2 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.specialties-header p {
+  color: #6b7280;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.specialty-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.specialty-card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.specialty-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.specialty-card:hover .specialty-overlay {
+  opacity: 1;
+}
+
+.specialty-content {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.specialty-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+      height: 350px;
+  }
+  .specialties-grid {
+      grid-template-columns: 1fr;
+  }
+}
