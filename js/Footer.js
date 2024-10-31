@@ -47,7 +47,7 @@ class FooterPanel extends HTMLElement {
     </div>
 
     <div class="footer-bottom">
-      <p>© <span id="current-year"></span> JurassicPan. All rights reserved.</p>
+      <p>© <span id="current-year"></span> JurassicPan. All rights reserved. Deploy by AlanCalderondev</p>
     </div>
   </footer>`;
     }
